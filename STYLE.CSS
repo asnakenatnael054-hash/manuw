@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f3f4f6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #2563eb;
+}
+
+.summary,
+.tools,
+form {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.summary div {
+    background: white;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+input,
+select,
+button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input,
+form select,
+.tools input,
+.tools select {
+    flex: 1;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.delete {
+    background: red;
+}
+
+#error {
+    color: red;
+}
+
+#empty {
+    text-align: center;
+    color: gray;
+}
+
+tr {
+    animation: show .3s;
+}
+
+@keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.dark {
+    background: #18181b;
+    color: white;
+}
+
+.dark .box,
+.dark .summary div,
+.dark table {
+    background: #27272a;
+}
+
+.dark input,
+.dark select {
+    background: #333;
+    color: white;
+}
+
+@media (max-width: 700px) {
+    .summary,
+    .tools,
+    form {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
